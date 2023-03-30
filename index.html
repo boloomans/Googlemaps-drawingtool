@@ -11,17 +11,46 @@
 
     <link rel="stylesheet" type="text/css" href="./style.css" />
     <script
-      src="https://code.jquery.com/jquery-3.6.4.slim.min.js"
+      src="https://code.jquery.com/jquery-3.6.4.min.js"
       integrity="sha256-a2yjHM4jnF9f54xUQakjZGaqYs/V1CYvWpoqZzC2/Bw="
       crossorigin="anonymous"
     ></script>
     <script type="module" src="./index.ts"></script>
+    <style>
+      .container{
+        max-width: 1320px;
+        margin: 0 auto;
+        display: flex;
+      }
+
+      .left{
+        width: 60%;
+      }
+
+      .right{
+        width: 40%;
+      }
+
+      #map{
+        height: 600px;
+      }
+
+      textarea{
+        width: 100%;
+        height: 100%;
+      }
+    </style>
   </head>
   <body>
-    <div id="map"></div>
-    <textarea name="vertices" value="" id="vertices"></textarea>
-
-    <!-- 
+    <div class="container">
+      <div class="left">
+        <div id="map"></div>
+      </div>
+      <div class="right">
+        <textarea name="vertices" value="" id="vertices"></textarea>
+      </div>
+    </div>
+    <!--
       The `defer` attribute causes the callback to execute after the full HTML
       document has been parsed. For non-blocking uses, avoiding race conditions,
       and consistent behavior across browsers, consider loading using Promises.
